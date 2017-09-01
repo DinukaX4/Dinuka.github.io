@@ -3,70 +3,41 @@
 
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Java Script Timers</title>
+    <title>HTML TABLES</title>
     <style>
-        #header{
+        #container{
             position: absolute;
-            width: 100px;
-            height: 100px;
-
-
-        }
-        #time-out{
-            font-size: 100px;
-            text-align: center;
-            visibility: hidden;
-
-        }
-        #btnSet{
-            position: absolute;
+            top: 0px;
+            left: 0px;
             bottom: 0px;
+            right: 0px;
+            //background-color: greenyellow;
         }
-        /*#time-out{
+        #move-image{
             position: absolute;
-            bottom: 0px;
-        }*/
+        }
+
+
+
     </style>
     
 </head>
-<body>
+<body id="s">
+
+    <div id="container">
+
+    </div>
+
+    <img id="move-image" src="Image/home.png">
 
 
-    <img src="Image/Zz1SwFn.gif" id="header">
-    <button id="btnSet">SET</button>
-    <div id="time-out">IJSE</div>
+
+
     <script src="Js/jquery-3.2.1.min.js"></script>
-    <script>
-
-        var position=0;
-
-        function interverl(eve) {
-            position+=10;
-            $("#header").css("left",position);
-            //$("#header").css("top",position);
-            //$("#header").css("left",position);
-            if((position-10)===1000){
-                position=0;
-
-
-
-            }
-
-
-        }
-        function timeSet() {
-            $("#time-out").css("visibility","visible");
-        }
-        $("#btnSet").click(function() {
-            setTimeout(timeSet,1000)
-        });
-        setInterval(interverl,500);
-
-
-    </script>
+    <script src="Js/HomeController.js"></script>
 </body>
    
 
 
 
-    </html>
+    <html>

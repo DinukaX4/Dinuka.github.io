@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Java Script Timers</title>
+    <style>
+        #header{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+
+
+        }
+        #time-out{
+            font-size: 100px;
+            text-align: center;
+            visibility: hidden;
+
+        }
+        #btnSet{
+            position: absolute;
+            bottom: 0px;
+        }
+        /*#time-out{
+            position: absolute;
+            bottom: 0px;
+        }*/
+    </style>
+    
+</head>
+<body>
+
+
+    <img src="Image/Zz1SwFn.gif" id="header">
+    <button id="btnSet">SET</button>
+    <div id="time-out">IJSE</div>
+    <script src="Js/jquery-3.2.1.min.js"></script>
+    <script>
+
+        var position=0;
+
+        function interverl(eve) {
+            position+=10;
+            $("#header").css("left",position);
+            //$("#header").css("top",position);
+            //$("#header").css("left",position);
+            if((position-10)===1000){
+                position=0;
+
+
+
+            }
+
+
+        }
+        function timeSet() {
+            $("#time-out").css("visibility","visible");
+        }
+        $("#btnSet").click(function() {
+            setTimeout(timeSet,1000)
+        });
+        setInterval(interverl,500);
+
+
+    </script>
+</body>
+   
+
+
+
+    </html>
